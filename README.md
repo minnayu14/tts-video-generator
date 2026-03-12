@@ -4,7 +4,7 @@
 
 ## 演示视频
 
-https://github.com/minnayu14/tts-video-generator/raw/main/demo/demo.mp4
+https://github.com/user-attachments/assets/dd2fd4f5-8671-4f5f-80d8-18345fb09d61
 
 ## 工作流程
 
