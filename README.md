@@ -104,12 +104,32 @@ tts-video-generator/
 ├── tts_generate.py     # 独立 TTS 音频生成脚本
 ├── .env.example        # 配置模板
 ├── requirements.txt    # Python 依赖
+├── skill/SKILL.md      # Claude Code Skill 定义
 ├── scripts.docx        # 你的脚本文档（需自行创建）
 ├── backgrounds/        # 背景图片（需自行创建）
 ├── bgm/                # 背景音乐（可选）
 ├── audio_output/       # 生成的音频 + 时间戳缓存（自动创建）
 └── video_output/       # 最终输出的 MP4 视频（自动创建）
 ```
+
+## 作为 Claude Code Skill 使用
+
+如果你使用 [Claude Code](https://claude.com/claude-code)，可以把本项目作为 Skill 使用，Claude 会自动检查环境、引导配置、执行生成。
+
+**安装方式**：
+
+```bash
+# 将 SKILL.md 复制到 Claude Code 的 commands 目录
+mkdir -p ~/.claude/commands
+cp skill/SKILL.md ~/.claude/commands/tts-video-generator.md
+```
+
+**使用方式**：在 Claude Code 对话中直接说：
+- "帮我生成第5期视频"
+- "批量生成视频"
+- "只生成音频不要视频"
+
+Claude 会自动检查 API Key、FFmpeg、依赖是否就绪，缺什么就引导你配置。
 
 ## 协议
 
